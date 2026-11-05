@@ -20,7 +20,7 @@
 
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <button type="submit" class="btn btn-outline-dark">
+                    <button type="submit" class="btn btn-outline-danger">
                         Keluar
                     </button>
                 </form>
@@ -38,49 +38,49 @@
                 </p>
             </div>
 
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body">
-                            <h2 class="h5">Menu</h2>
-                            <p class="text-body-secondary">
-                                Lihat daftar menu.
-                            </p>
-                            <a href="/#menu" class="btn btn-outline-dark btn-sm">
-                                Lihat Menu
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body">
-                            <h2 class="h5">Tentang</h2>
-                            <p class="text-body-secondary">
-                                Baca cerita dan informasi tentang Kopi Rakyat.
-                            </p>
-                            <a href="/#tentang" class="btn btn-outline-dark btn-sm">
-                                Lihat Profil
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body">
-                            <h2 class="h5">Galeri</h2>
-                            <p class="text-body-secondary">
-                                Lihat kumpulan foto Kopi Rakyat.
-                            </p>
-                            <a href="/galeri" class="btn btn-outline-dark btn-sm">
-                                Lihat Galeri
-                            </a>
-                        </div>
-                    </div>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <img 
+                    src="{{ asset('images/kr-kopi.jpg') }}" 
+                    class="card-img-top" 
+                    alt="Menu Kopi Rakyat">
+                <div class="card-body">
+                    <h5 class="card-title">Menu</h5>
+                    <p class="card-text">Kelola Menu yang ada di Kopi Rakyat.</p>
+                    <a href="/#menu" class="btn btn-primary">Kelola Menu</a>
                 </div>
             </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <img 
+                    src="{{ asset('images/kr-bar.jpg') }}" 
+                    class="card-img-top" 
+                    alt="Menu Kopi Rakyat">
+                <div class="card-body">
+                    <h5 class="card-title">Tentang</h5>
+                    <p class="card-text">Ceritakan Siapa kita - Kopi Rakyat.</p>
+                    <a href="/#tentang" class="btn btn-primary">Ubah Profil</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <img 
+                    src="{{ asset('images/kr-meja.jpg') }}" 
+                    class="card-img-top" 
+                    alt="Menu Kopi Rakyat">
+                <div class="card-body">
+                    <h5 class="card-title">Galeri</h5>
+                    <p class="card-text">Kelola Galeri, foto suasana dan foto menu terbaru dan unggulan.</p>
+                    <a href="/#galeri" class="btn btn-primary">Kelola Galeri</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
             <div class="alert alert-light border mt-4 mb-0">
                 Login sebagai <strong>{{ auth()->user()->email }}</strong>

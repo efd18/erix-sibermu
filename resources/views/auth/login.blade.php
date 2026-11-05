@@ -10,6 +10,8 @@
             rel="stylesheet"
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
             crossorigin="anonymous">
+
+        <link href="{{ asset('css/sign-in.css') }}" rel="stylesheet">
     </head>
     <body class="bg-body-tertiary">
         <main class="container min-vh-100 d-flex align-items-center justify-content-center py-5">
@@ -18,13 +20,14 @@
                     <div class="card-body p-4 p-md-5 text-center">
                         <img
                             src="{{ asset('images/kr-management.png') }}"
-                            width="240"
+                            width="220"
                             alt="Kopi Rakyat"
                             class="img-fluid mb-3">
                         
                         <h1 class="h3 mb-2">Menuju Dashboard</h1>
                         <p class="text-body-secondary mb-4">
-                            Selamat Datang.! Masuk sebagai Staff.
+                            Hai, Mau kelola apa hari ini? <br>
+                            Masuk sebagai pengelola
                         </p>
 
                         <form method="POST" action="{{ route('login.authenticate') }}" class="text-start">
@@ -41,25 +44,26 @@
                                 <input
                                     type="email"
                                     id="email"
+                                    placeholder="name@email.com"
                                     name="email"
                                     class="form-control"
                                     autocomplete="username"
                                     value="{{ old('email') }}"
                                     required>
                             </div>
-
                             <div class="mb-4">
                                 <label for="password" class="form-label">Kata Sandi</label>
                                 <input
                                     type="password"
                                     id="password"
+                                    placeholder="Masukan kata sandi"
                                     name="password"
                                     class="form-control"
                                     autocomplete="current-password"
                                     required>
                             </div>
 
-                            <button type="submit" class="btn btn-dark w-100">
+                            <button type="submit" class="btn btn-success w-100">
                                 Masuk
                             </button>
                         </form>

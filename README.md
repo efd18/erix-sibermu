@@ -1,22 +1,64 @@
 # Kopi Rakyat
-Menggunakan Laravel dan Bootstrap
-Web profile kedai kopi dengan nuansa Payakumbuh dan Limapuluh Kota.
+Web profil kedai kopi dengan sistem login sebagai pengelola.
 
-# Isi halaman
-Dalam proyek ini saya baru merapikan di 1 halaman utama
-- Beranda
-- Menu minuman dan camilan
-- Galeri
-- Tentang Kami
-- Kontak
+# Fitur
+- Halaman profil kedai, menu dan galeri
+- Login sebagai pengelola "Kelola"
+- Dashboard yang hanya dapat dibuka setelah login
+- Logout "Keluar"
 
-# Menjalankan proyek
-Persyaratan: PHP 8.3+, Composer, dan Node.js/npm.
+# Teknologi
+- Laravel 13
+- Bootstrap 5.3 (dimuat melalui CDN)
+- MySql
 
-```powershell
-composer install
-Copy-Item .env.example .env
-php artisan key:generate
-npm install
-npm run build
-php artisan serve
+# Akun Demo
+Email: admin@kopirakyat.com
+Kata sandi: Admin1234
+
+# Persyaratan
+- PHP 8.3 atau lebih baru
+- Composer
+- Node.js dan npm
+- MySQL
+
+# Cara menjalankannya di Windows
+1. Buka terminal pada folder proyek
+
+2. Pasang dependensi PHP:
+
+    ```powershell
+   composer install
+   ```
+
+3. Buat file konfigurasi lokal
+
+    ```powershell
+    Copy-Item .env.example .env
+    php artisan key:generate
+    ```
+
+4. Pastikan server MySQL berjalan dan database yang namanya sesuai dengan DB_DATABASE di .env sudah dibuat. Sesuaikan nilai DB_* di .env jika konfigurasi MySQL kamu berbeda.
+
+5. Buat tabel dan akun demo
+
+    ```powershell
+    php artisan migrate
+    php artisan db:seed
+    ```
+
+6. Pasang dan bangun aset frontend
+    ```powershell
+    npm install
+    npm run build
+    ```
+
+7. Jalankan Laravel
+
+    ```powershell
+   php artisan serve
+   ```
+
+8. Buka alamat yang muncul di terminal, biasanya http://127.0.0.1:8000
+
+Bootstrap dimuat melalui CDN, memerlukan koneksi internet agar tampilannya termuat.
