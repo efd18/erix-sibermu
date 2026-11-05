@@ -88,6 +88,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#kontak">Kontak</a>
                             </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="btn btn-dark btn-sm ms-lg-2" href="{{ route('login') }}">
+                                    Kelola
+                                </a>
+                            </li>
                         </ul>
         </div>
                 </div>
